@@ -1,9 +1,21 @@
 import { Component } from "react";
-import SassComponent from "./SassComponent";
+import StyledComponent from "./StyledComponent";
+// import CSSModule from "./CSSModule";
+// import SassComponent from "./SassComponent";
 
 class App extends Component {
+  fname(params) {
+    console.log(params);
+  }
   render() {
-    return <SassComponent />;
+    this.fname`hello is ${{ TTHIS: true }} ${() => "WORK?"}`;
+    return (
+      <>
+        {/* <SassComponent /> */}
+        {/* <CSSModule /> */}
+        <StyledComponent />
+      </>
+    );
   }
 }
 
